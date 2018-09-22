@@ -1,59 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <title>daniel ramos</title>
+  <link rel="icon" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+  <link rel="stylesheet" href="css/stilos.css">
 </head>
 
 <body>
   <header>
     <div>
-      <nav>
+      <figure class="logo">
+        <img src="images/logo.png" alt="logo de http://leonidassteban.com logo">
+      </figure>
+      <nav class="menu">
         <ol>
           <li>
-            <a>Portafoli0</a>
+            <a class="link" href="#portafolio">Portafoli0</a>
           </li>
           <li>
-            <a>Experiencia</a>
+            <a class="link" href="#eventos">Experiencia</a>
           </li>
           <li>
-            <a>Trabajemos juntos</a>
+            <a class="link" href="#contacto">Trabajemos juntos</a>
           </li>
         </ol>
       </nav>
     </div>
   </header>
-  <section>
+  <section class="hero">
     <h1>
-      Hola! soy <strong>Daniel Ramos</strong> <br> desarroyador <br> <strong>full stack</strong>
+      Hola! soy <strong>Daniel Ramos</strong> <br> desarroyador <strong>full stack</strong>
     </h1>
-    <img src="" alt="logo de http://leonidas.com"> <!--imagen de portada-->
+    <!-- <img src="images/hero.jpg" width="500" height="300" alt="imagen principal del sitio"> -->
+    <!--imagen de portada-->
   </section>
-  <section>
+  <section id="portafolio" class="portfolio">
     <h2>portafolio (Proyectos Destacados)</h2>
-    <article>
-      <h3>Platzi Video</h3>
-      <h6>React Native / React </h6>
-      <p><small><strong>Fecha:</strong> 21/09/2018</small></p>
-      <p><small><strong>Puedes verlo en:</strong>www.platzi.com/native</small></p>
-      <p>React Native lets you build mobile apps using only JavaScript. It uses the same design as React, letting you
-        compose a rich mobile UI from declarative components.</p>
-    </article>
-  </section>
-  <h2>MAS SOBRE MI EXPERIENCIA</h2>
-  <section>
-    <article>
-      <figure>
-        <img src="" alt="">
+    <article class="project">
+      <div class="project-details">
+        <h3 class="project-title">Platzi Video</h3>
+        <h6 class="project-course">React Native / React </h6>
+        <p class="project-date"><small><strong>Fecha:</strong> 21/09/2018</small></p>
+        <p class="project-url"><small><strong>Puedes verlo en:</strong>www.platzi.com/native</small></p>
+        <p class="project-description">Platzi Video fue el resultado de 3 meses de trabajo
+          para crear la mejor app para enseñar el funcionamiento
+          de React y React Native. Desde crear un vista-detalle, hasta patrones avanzados de nevegación, este proyecto
+          ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma</p>
+      </div>
+      <figure class="project-imageContainer">
+        <img class="project-image" src="images/platzi-video-react-native.png" alt="proyecto del curso de areact native"
+          width="500">
       </figure>
-      <h3>PlatziConf Mexico 2018</h3>
-      <p>El evento más grande sobre gente que quiere aprender más de internet. En este evento te comparto cómo tener
-        una vida de constante aprendizaje.</p>
-      <a href="Ver Platica"></a>
     </article>
   </section>
-  <section>seccion contacto</section>
-  <footer>footer</footer>
+  <section id="eventos">
+    <h2>Mas Sobre mi experiencia</h2>
+    <article class="event">
+      <figure class="event-imageContainer">
+        <img class="event-image" src="images/platzi-conf.jpg" alt="" width="500">
+      </figure>
+      <h3 class="event-title">PlatziConf Mexico 2018</h3>
+      <p class="event-description">El evento más grande sobre gente que quiere aprender más de internet. En esté evento
+        te comparto como tener
+        una vida de constante aprendizaje.</p>
+      <a class="event-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver Plática</a>
+    </article>
+  </section>
+  <section id="contacto" class="contact">
+    <form action="/suscripcion/" class="form-email">
+      <h3 class="">¿Creamos algo juntos?</h3>
+      <label for="email">Déjame tu email</label>
+      <input type="datetime" placeholder="Déjame tu email" value="@gamil.com" id="email">
+      <button>Enviar</button>
+    </form>
+  </section>
+  <footer class="footer">footer</footer>
 </body>
 
 </html>
