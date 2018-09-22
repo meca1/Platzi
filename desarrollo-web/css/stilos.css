@@ -20,6 +20,7 @@ valores */
 
 body{
   font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  margin: 0;
 }
 h1,
 h2,
@@ -38,6 +39,7 @@ h1{
   text-transform: capitalize;
   color: white;
   /* text-decoration: underline; */
+  margin: 100px 520px 70px 30px;
 }
 h1 strong {
   color: #026fff;
@@ -51,12 +53,18 @@ h1 strong {
   background-position-x: right;
   background-color: #1c242c;
 }   
+.portfolio {
+  background: #fafafa;
+}
 .project {
   /* border-top: 10px solid red;
   border-right: 10px dashed red;
   border-left: 10px inset red;
   border-bottom: 10px groove red; */
   
+  border: 1px solid gray;
+  border-radius: 10px;
+
   /* border-color: red;
   border-width: 15px;
   border-style: dashed; */
@@ -64,6 +72,11 @@ h1 strong {
   /* border: 1px solid gray;
   border-radius: 10px;
   border-top-left-radius: 50px; */
+  margin: 10px;
+  margin-bottom: 15px;
+
+  padding: 20px;
+  background: white;
 }      
 .project-details{
   width: 500px;
