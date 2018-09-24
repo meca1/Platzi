@@ -56,14 +56,20 @@ h2{
 
 .hero{
   height: 300px;
-  background-image: url("../images/hero.jpg");
-  background-size: 500px 300px;
-  background-repeat: no-repeat;
-  background-position-x: right;
+  /* background-image: url("../images/hero.jpg"); */
+  /* background-size: 500px 300px; */
+  /* background-repeat: no-repeat; */
+  /* background-position-x: right; */
   background-color: #1c242c;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }   
+
+.hero-image{
+  object-fit: cover;
+}
+
 .portfolio {
   background: #fafafa;
   padding: 20px;
@@ -186,7 +192,9 @@ footer a {
 }
 
 .event-list{
-  display: flex;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 .event {
   margin: 10px;
@@ -218,4 +226,70 @@ footer a {
   text-decoration: none;
   border: 1px solid;
   padding: 5px 20px;
+}
+
+.contact{
+  background-color: #056fff;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px
+}
+.social{
+}
+
+.social-link{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-size: 50px 50px;
+}
+
+.social-link.twiter{
+  background-image: url('../images/twitter.svg');
+}
+.social-link.facebook{
+  background-image: url('../images/facebook.svg');
+}
+.social-link.github{
+  background-image: url('../images/github.svg');
+}
+.social-link.instagram{
+  background-image: url('../images/instagram.svg');
+}
+.form-email input{
+  border-color: gray;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 20px 10px 25px;
+  background-image: url('../images/envelope.svg');
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 5px;
+}
+
+.form-email button{
+  display: block;
+  margin-top: 10px;
+  background: transparent;
+  width: 100px;
+  border-radius: 5px;padding: 10px 0;
+  color: white;
+  border: 1px solid white;
+}.form-email h3 {
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
+.container{
+  /* border: 1px solid red; */
+  width: 1050px;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
 }
