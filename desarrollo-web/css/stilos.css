@@ -38,11 +38,20 @@ h1{
   letter-spacing: -.2px;
   text-transform: capitalize;
   color: white;
+  margin: 0;
   /* text-decoration: underline; */
-  margin: 100px 520px 70px 30px;
+  /* margin: 100px 520px 70px 30px; */
 }
 h1 strong {
   color: #026fff;
+}
+h2{
+  color: #026fff;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40px;
 }
 
 .hero{
@@ -52,9 +61,12 @@ h1 strong {
   background-repeat: no-repeat;
   background-position-x: right;
   background-color: #1c242c;
+  display: flex;
+  align-items: center;
 }   
 .portfolio {
   background: #fafafa;
+  padding: 20px;
 }
 .project {
   /* border-top: 10px solid red;
@@ -77,7 +89,31 @@ h1 strong {
 
   padding: 20px;
   background: white;
-}      
+  display: flex;|
+  align-items: center;
+  justify-content: space-between;
+}   
+
+.project-coursu,
+.project-date,
+.project-url{
+  margin: 10px 0;
+}
+
+.project-description{
+  font-size: 20px;
+}
+
+.project strong {
+  font-family: 'Fjalla One', Times, serif;
+}
+
+.project-title {
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
 .project-details{
   width: 500px;
 }
@@ -87,8 +123,99 @@ h1 strong {
 header{
   background: #1c242c;
   color: white;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
 }
+.menu{
+  height: inherit;
+}
+
+header ol{
+  display: flex;
+  height: inherit;
+}
+
+header ol li{
+  height: inherit;
+}
+
 header a {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0 10px;
+}
+
+ol,
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ figure{
+   margin: 0;
+ }
+
+ header a {
   color:  white;
   text-decoration: none;
+}
+
+footer {
+  background: #1b2127;
+  color: white;
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+}
+.pmargin{
+  padding-top: 5px
+
+}
+footer img{
+  vertical-align: middle;
+}
+footer a {
+  color: white;
+}
+
+.event-list-title{
+  margin-left: 20px
+}
+
+.event-list{
+  display: flex;
+}
+.event {
+  margin: 10px;
+  width: 500px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f4fbff;
+}
+
+.event-image{
+  width: 500px;
+  height: 200px;
+  object-fit: cover;
+}
+.event-datails{
+  margin: 20px 40px;
+  margin-top: -40px;
+  background: white;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+.event-description{
+  text-align: left;
+}
+.event-url{
+  color: #026fff;
+  text-decoration: none;
+  border: 1px solid;
+  padding: 5px 20px;
 }
