@@ -70,29 +70,14 @@
     }
 
     .btn-start {
-      cursor: pointer;
-      width: 420px;
+      width: 400px;
       height: 100px;
       background: #ecf0f1;
       color: #2c3e50;
-      border: none;
-      border-bottom: 4px solid #c4c6c7;
-      border-radius: 8px;
-      font-size: 3em;
+      font-size: 2.5rem;
       position: absolute;
       top: calc(50% - 50px);
-      left: calc(50% - 210px);
-      transition: .5s;
-      outline: none;
-    }
-    .btn-start:hover {
-      color: #ecf0f1;
-      background: #2c3e50;
-      border-bottom: 4px solid #1f3346;
-    }
-    
-    .btn-start:active {
-      transform: scale(.95);
+      left: calc(50% - 200px);
     }
 
     .hide {
@@ -119,17 +104,63 @@
       constructor() {
         this.inicializar()
         this.generarSecuencia()
+        this.siguienteNivel()
       }
       inicializar() {
         btnEmpezar.classList.add('hide')
+        this.nivel = 1
+        this.colores = {
+          celeste,
+          violeta,
+          naranja,
+          verde
+        }
       }
-      generarSecuencia(){
-        this.secuencia = new Array(10).fill(0).map(n => Math.floor( Math.random() *4))
+      generarSecuencia() {
+        this.secuencia = new Array(10).fill(0).map(n => Math.floor(Math.random() * 4))
+      }
+      siguienteNivel() {
+        this.iluminarSecuencia()
+        this.agregarEventosClick()
+      }
+      transformarNumeroAColor(numero) {
+        switch (numero) {
+          case 0:
+            return 'celeste'
+          case 1:
+            return 'violeta'
+          case 2:
+            return 'naranja'
+          case 3:
+            return 'verde'
+        }
+      }
+      iluminarSecuencia() {
+        for (let i = 0; i < this.nivel; i++) {
+          const color = this.transformarNumeroAColor(this.secuencia[i])
+          setTimeout(() => this.iluminarColor(color), 1000 * i)
+        }
+      }
+      iluminarColor(color) {
+        this.colores[color].classList.add('light')
+        setTimeout(() => this.apagarColor(color), 350)
+      }
+      apagarColor(color) {
+        this.colores[color].classList.remove('light')
+      }
+      agregarEventosClick(){
+        this.colores.celeste.addEventListener('click', this.elegirColor)
+        this.colores.verde.addEventListener('click', this.elegirColor)
+        this.colores.violeta.addEventListener('click', this.elegirColor)
+        this.colores.naranja.addEventListener('click', this.elegirColor)
+      }
+      elegirColor(ev){
+        console.log(ev);
+        
       }
     }
     function empezarJuego() {
-      // var juego = new Juego()
-      window.Juego = new Juego()
+      window.juego = new Juego()
     }
   </script>
 </body>
