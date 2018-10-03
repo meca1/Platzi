@@ -110,3 +110,5 @@ usa max-width (max-width = hasta)
  más de 1024 píxeles o más.
 
  se utlizan mas que todo en la hoja de estilos
+
+  Por otro lado, para hacer esto posible, aprenderás a aplicar las etiquetas de max-width y flex- wrap; éstas también te ayudarán a evitar que tu usuario necesite navegar la página de forma horizontal, pues la información se organizará en forma vertical para facilitar la experiencia.
