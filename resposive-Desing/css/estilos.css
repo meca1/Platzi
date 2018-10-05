@@ -56,6 +56,7 @@ h1 {
 }
 h1 strong {
   color: #026fff;
+  text-shadow: 1px 2px 2px #000;
 }
 h2 {
   color: #026fff;
@@ -234,8 +235,8 @@ figure {
   margin-left: 20px;
 }
 .event { 
-  margin: 10px;
-  width: 480px;
+  margin: 1%;
+  width: 48%;
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
@@ -274,9 +275,11 @@ figure {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 1em;
 }
 
-.social {
+.social a {
+  margin: 5px;
 }
 
 .social-link {
@@ -338,11 +341,31 @@ figure {
   align-items: inherit;
   height: inherit;
   flex-wrap: inherit;
+  padding: 1em;
 }
 
 /* desktop first que empieces desde el MQ más grande */
 
 @media screen and (max-width: 1024px) {
+  .hero{
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 2em;
+  }
+  .hero-image{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  h1{
+    font-size: 2em;
+    z-index: 2;
+  }
 
 }
 
@@ -398,15 +421,56 @@ figure {
     font-size: .8em;
 
   }
+  .event{
+    width: auto;
+    flex-shrink: initial;
+  }
+  .event img {
+    width: 100%;
+  }
+  .event-detail{
+    /* margin: -40px 10px 10px 10px */
+    margin: -2em .5em .5em;
+    padding: 1me;
+  }
+  .contact{
+    height: auto;
+    /* padding: 1.5em; */
+    text-align: center;
+    display: block;
+  }
+  .form-email button{
+    margin: 1em auto;
+  }
+  .form-email h3{
+    margin-top: 0;
+  }
+  .footer{
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;
+  }
+  
 }
 
 @media screen and (max-width: 480px) {
   .project-details {
     font-size: 12px;
   }
+  h1{
+    font-size: 1.3em;
+  }
 }
 
 
 @media screen and (max-width: 320px) {
-  
+  h1{
+    font-size: 1.2em;
+  }
+  .hero{
+    padding: 2em 1em;
+  }
+  .hero-image{
+    /* filter: opacity(80%) blur(1px); */
+  }
 }

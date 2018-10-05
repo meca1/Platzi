@@ -1,5 +1,11 @@
+## ¿Qué es Responsive Design?
+
+Responsive design son todas esas técnicas que usamos para adaptar nuestras aplicaciones web a la mayor cantidad de pantallas.
+
 ##  meta viwport
-wiewport: la parte visible de navegador
+wiewport: Es el area visible de navegador
+
+Para setear el viewport, se va a hacer desde una etiqueta meta.
 
 esta es una etiqueta de metadatos que te ayudará a configurar tu website para que sea visible en dispositivos de menor tamaño. 
 
@@ -112,3 +118,15 @@ usa max-width (max-width = hasta)
  se utlizan mas que todo en la hoja de estilos
 
   Por otro lado, para hacer esto posible, aprenderás a aplicar las etiquetas de max-width y flex- wrap; éstas también te ayudarán a evitar que tu usuario necesite navegar la página de forma horizontal, pues la información se organizará en forma vertical para facilitar la experiencia.
+
+## CSS Positions
+**static:** es la propiedad por defecto.
+Con las otras opciones, se activan las propiedades de top, bottom, left, right y z-index.
+
+**relative:** el objeto se mueve en base al lugar donde se encuentra originalmente.
+
+**absolute:** el objeto se ubica de manera absoluta con el elemento más cercano que tenga posición relativa o con el body.
+
+**fixed:** El elemento se muestra de manera fija en el viewport.
+
+**sticky:** El elemento se queda de manera fija una vez que aparece en pantalla.
