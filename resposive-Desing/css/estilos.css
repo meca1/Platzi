@@ -66,6 +66,10 @@ h2 {
   font-size: 24px;
   margin-bottom: 40px;
 }
+.html-video{
+  width: 100%;
+ height: auto;
+}
 
 .hero {
   height: 300px;
@@ -78,6 +82,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  
 }
 
 .hero-image{
@@ -362,6 +367,7 @@ figure {
     bottom: 0;
     width: 100%;
   }
+
   h1{
     font-size: 2em;
     z-index: 2;
