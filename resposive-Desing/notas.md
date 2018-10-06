@@ -143,6 +143,12 @@ Para que un video se ajuste al tamaño de pantalla, se puede hacer lo siguiente:
 ```
 ### Video Insertado
 
+### la etiqueta iframe.
+
+Ésta etiqueta hará posible que el video que insertes tenga la posibilidad de adaptarse a distintas formas de visualización, aunque, a pesar de ellas, aprenderás cuáles son las diferencias entre usar un video inserto y hacerlo desde html5.
+
+
+
 ```html
 <div class="flexible-video">
   <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/LoKvxCSZw5w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
