@@ -130,3 +130,40 @@ Con las otras opciones, se activan las propiedades de top, bottom, left, right y
 **fixed:** El elemento se muestra de manera fija en el viewport.
 
 **sticky:** El elemento se queda de manera fija una vez que aparece en pantalla.
+## Video Responsive
+Para que un video se ajuste al tamaño de pantalla, se puede hacer lo siguiente:
+
+```css
+
+.html-video  {
+  width: 100%;
+  height: auto;
+}
+
+```
+### Video Insertado
+
+```html
+<div class="flexible-video">
+  <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/LoKvxCSZw5w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+```
+```css
+.youtube-video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.flexible-video {
+  width: 100%;
+  height: 0;
+  /* height * 100 / width */
+  padding-top: 56.25%;
+  position: relative;
+}
+```
