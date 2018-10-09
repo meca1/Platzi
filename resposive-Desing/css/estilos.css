@@ -413,6 +413,20 @@ figure {
   background: #056fff;
   position: relative;
 }
+.burger-button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .5);
+  display: none;
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  z-index: 4;
+  color: white;
+  font-size: 1.5em;
+}
+
 /* desktop first que empieces desde el MQ más grande */
 
 @media screen and (max-width: 1024px) {
@@ -440,6 +454,9 @@ figure {
 }
 
 @media screen and (max-width: 767px) {
+  .burger-button{
+    display: block;
+  }
   .header {
     display: block;
     height: auto;
@@ -452,9 +469,31 @@ figure {
   }
   .header a {
     justify-content: center;
+    height: 40px;
+    font-size: 2em;
+    text-decoration: underline;
+    margin-bottom: .5em;
   }
   .header .logo {
     text-align: center;
+  }
+
+  .menu{
+    position: fixed;
+    background:rgba(27, 33, 39,.95);
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    bottom: 0;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+  }
+  .menu.is-active{
+    left: 0;
   }
 
   .project {

@@ -173,3 +173,22 @@ Para que un video se ajuste al tamaño de pantalla, se puede hacer lo siguiente:
   position: relative;
 }
 ```
+
+```css
+.menu {
+        position: fixed;
+        background-color: rgba(5, 111, 255, .9);
+        z-index: 3;
+        top: 0;
+        left:-100vw; /* Para que el menu se oculte a la izquierda y se cree el efecto al hacer click*/
+        width: 100vw;
+        bottom: 0;/* height: 100vw; *//*A partir de aqui para centrar*/
+        display: flex;
+        align-items: center;
+        justify-content: center; /* centrar hasta aqui */
+        transition: .3s; /* Para crear efecto de transición */
+    }
+    .menu.is-active {
+        left: 0;
+    }
+    ```
