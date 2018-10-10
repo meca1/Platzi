@@ -3,7 +3,7 @@ body{
 }
 .container{
   display: grid;
-  grid-template:100vh/  25% 50% 25%;
+  grid-template:300px 150px 100px/  25% 50% 25%;
   /* grid-template-columns: 25% 50% 25%;
   grid-template-rows:300px 300px; */
 }
@@ -11,4 +11,15 @@ body{
   background: lightblue;
   padding: 10px;
   border: 1px solid red;
+}
+.item:nth-of-type(4){
+  background: blue;
+  overflow: auto;
+  /* display:subgrip; */
+  /* display: -ms-inline-grid; */
+  display: grid;
+  grid-template:50px 50px 50px/  25% 50% 25%;
+}
+.item .item {
+  background: yellow;
 }
