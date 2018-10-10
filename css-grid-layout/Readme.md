@@ -27,3 +27,8 @@ También serán las que van a contornear nuestro grid.
 Grid explicito (explicit grid) es cuando nosotros definimos el numero de filas o columnas.
 
 Grid implicito (implicit grid) es cuando tenemos filas o columnas que no definimos pero son parte de nuestro grid.
+
+
+```css
+grid-template: filas / columnas;
+```
