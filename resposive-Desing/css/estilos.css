@@ -429,7 +429,16 @@ figure {
 
 /* desktop first que empieces desde el MQ más grande */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
+  .event-list-title {
+    margin-left: 0;
+  }
+  .portfolio {
+    padding: 0;
+  }
+  .container {
+    padding: 0 1em;
+  }
   .hero{
     height: auto;
     position: relative;
@@ -454,6 +463,10 @@ figure {
 }
 
 @media screen and (max-width: 767px) {
+  h2 {
+    font-size: 1.2em;
+    margin: .5em 0;
+  }
   .burger-button{
     display: block;
   }
@@ -563,23 +576,50 @@ figure {
 }
 
 @media screen and (max-width: 480px) {
-  .project-details {
-    font-size: 12px;
+  h1 {
+    font-size: 1.5em;
   }
-  h1{
-    font-size: 1.3em;
+  .project-details {
+    font-size: 14px;
+  }
+
+  .event-detail {
+    /* 1em = 16px */
+    margin: -2em .5em .5em;
+    padding: 1em;
+  }
+
+  .contact {
+    height: auto;
+    padding: 1.5em 0;
+    text-align: center;
+    display: block;
+  }
+  .form-email button {
+    margin: 1em auto;
+  }
+  .form-email h3 {
+    margin-top: 0;
+  }
+  .footer {
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;
+  }
+  .social-link {
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
   }
 }
 
 
 @media screen and (max-width: 320px) {
-  h1{
+  h1 {
     font-size: 1.2em;
+    /* background: rgba(0,0,0,.5) */
   }
-  .hero{
+  .hero {
     padding: 2em 1em;
-  }
-  .hero-image{
-    /* filter: opacity(80%) blur(1px); */
   }
 }

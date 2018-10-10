@@ -15,10 +15,9 @@ esta es una etiqueta de metadatos que te ayudará a configurar tu website para q
 
 Uno de los objetivos principales al usar esta etiqueta será que conserves la legibilidad de tu página web, al variar el escalado de tus contenidos.
 
-`width=device-width`para que se adapte según la pantalla del dispositivo
+* `width=device-width` para que se adapte según la pantalla del dispositivo
 
-`initial-scale=1.0
-` para indicar el escalado según el dispositivo (1 = 100% del zoom)
+* `initial-scale=1.0` para indicar el escalado según el dispositivo (1 = 100% del zoom)
 
 ## Medidas relativas útiles en Responsive Design
 
@@ -120,16 +119,17 @@ usa max-width (max-width = hasta)
   Por otro lado, para hacer esto posible, aprenderás a aplicar las etiquetas de max-width y flex- wrap; éstas también te ayudarán a evitar que tu usuario necesite navegar la página de forma horizontal, pues la información se organizará en forma vertical para facilitar la experiencia.
 
 ## CSS Positions
-**static:** es la propiedad por defecto.
+* **static:** es la propiedad por defecto.
 Con las otras opciones, se activan las propiedades de top, bottom, left, right y z-index.
 
-**relative:** el objeto se mueve en base al lugar donde se encuentra originalmente.
+* **relative:** el objeto se mueve en base al lugar donde se encuentra originalmente.
 
-**absolute:** el objeto se ubica de manera absoluta con el elemento más cercano que tenga posición relativa o con el body.
+* **absolute:** el objeto se ubica de manera absoluta con el elemento más cercano que tenga posición relativa o con el body.
 
-**fixed:** El elemento se muestra de manera fija en el viewport.
+* **fixed:** El elemento se muestra de manera fija en el viewport.
 
-**sticky:** El elemento se queda de manera fija una vez que aparece en pantalla.
+* **sticky:** El elemento se queda de manera fija una vez que aparece en pantalla.
+
 ## Video Responsive
 Para que un video se ajuste al tamaño de pantalla, se puede hacer lo siguiente:
 
@@ -174,7 +174,32 @@ Para que un video se ajuste al tamaño de pantalla, se puede hacer lo siguiente:
 }
 ```
 
+```html
+<!-- HTML -->
+<i class="icon-menu burger-button"></i>
+```
 ```css
+/* CSS */
+.burger-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,.8);
+  display: none;
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  z-index: 4;
+  left: 5px;
+  top: 5px;
+  color: #fff;
+}
+```
+```css
+@media screen and (max-width: 767px) {
+  .burger-button {
+    display: block;
+  }
 .menu {
         position: fixed;
         background-color: rgba(5, 111, 255, .9);
@@ -191,4 +216,104 @@ Para que un video se ajuste al tamaño de pantalla, se puede hacer lo siguiente:
     .menu.is-active {
         left: 0;
     }
-    ```
+```
+```js
+
+// Javascript
+const menu = document.querySelector('.menu');
+const burgerButton = document.querySelector('#burger-button');
+burgerButton.addEventListener('click', () => {
+  menu.classList.toggle('is-active');
+})
+```
+## Media Queries con JavaScript
+
+Hay ocaciones en las que solo se van a usar eventos dependiendo del tamaño de pantalla. Por ejemplo, en los burger menu. Para estos casos, se puede usar media queries en javascript
+
+```js
+//Media query
+const ipad = window.matchMedia('screen and (max-width: 767px)');
+
+//Activa la primera vez que se entra
+if(ipad.matches)
+  burgerButton.addEventListener('click', hideShow);
+
+//Activa o desactiva al hacer resize de la pantalla
+ipad.addListener((event) => {
+  if(event.matches)
+    burgerButton.addEventListener('click', hideShow);
+  else
+    burgerButton.removeEventListener('click', hideShow);
+});
+```
+## Propiedades CSS Útiles
+**Flex-Wrap**
+
+Pone un elemento debajo de otro si no entran en el viewport.
+
+```css
+flex-wrap: wrap; 
+
+```
+
+## Remote Debugging
+### **Servidor Estático en Node**
+Para poder hacer debugging se necesita un servidor statático.
+
+1. Instalar static-server
+
+```bash
+npm i -g static-server
+```
+2. ir a la carpeta del proyecto en la terminal.
+
+3. Ejecutar el comando 
+```bash
+ static-server
+ ```
+. Se va a generar una dirección con la aplicación.
+
+4. Verificar la ip de la computadora con:
+
+```bash
+$ ipconfig
+```
+5. Ingresar desde el dispositivo móvil ingresando **ip:puerto**
+
+***192.168.0.10:9080***
+
+### Remote Debugging en iOS
+
+Para esto es necesario tener una Mac.
+
+1. Conectar el celular con la computadora via USB.
+2. Abrir Safari.
+3. Ir a Preferencias de Safari.
+4. Habilitar "Mostrar el menú de Desarrollo en la barra de menús". Aparecerá un nuevo menú de desarrollo.
+5. Abrir el menú de desarrollo. Aparecerá el dispositivo en la lista.
+6. Abrir la ip del proyecto.
+
+### Remote Debugging en Android
+
+1. Conectar el celular con la computadora via USB.
+2. Activar el menú de desarrolldor en Android.
+  1. Ir a acerca del contenido
+  2. Hacer tab en **número de compilación** varias veces hasta que se active el menú de programnador.
+3. Ir al menú de programación.
+4. Activar la opción de **Depuración por USB**.
+5. Abrir Chrome en la computadora.
+6. Ir a **chrome://inspect**. Aparecerá una lista de los teléfonos con las ventanas que está navegando.
+7. Hacer click en inspect.
+
+## Recursos Complementarios
+* [Diapositivas del Curso](docs/responsive-design.pdf)
+
+
+
+## Enlaces de Interés
+* [Curso de Responsive Design](https://platzi.com/clases/responsive-design/)
+* [Repositorio de Github](https://github.com/LeonidasEsteban/responsive-design-portafolio)
+* [Mediaqueri](https://mediaqueri.es/)
+* [Codepen: CSS Positions](https://codepen.io/LeonidasEsteban/pen/VGWzWK)
+* [Icomoon](https://icomoon.io/)
+
