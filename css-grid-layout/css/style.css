@@ -2,15 +2,19 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 .container{
-  display: grid;
-  grid-template:300px 150px 100px/  25% 50% 25%;
   /* grid-template-columns: 25% 50% 25%;
   grid-template-rows:300px 300px; */
-  
+  /* grid-gap: filas  columnas; */
+  /* fr */
+  /* grid-template:300px 150px 100px/1fr 1fr 1fr; */
+  /* grid-template:300px 150px 100px/repeat(4, 1fr); */
+  /* grid-template:300px 150px 100px/minmax(200px, 1fr) 1fr 1fr 1fr; */
+  display: grid;
+  grid-template:300px 150px 100px/repeat(4, minmax(30px, 1fr));
+
   /* grid-column-gap:30px;
   grid-row-gap: 30px; */
-  /* grid-gap: filas  columnas; */
-  gap: 10px 50px;
+  gap: 10px ;
 }
 
 .item {

@@ -58,7 +58,16 @@ Escoje desde el untimo elemento hacia adelante
   gap: 10px 50px;/*espaciado entre columnas*/
 
 ```
+## Repetidores, unidades de medida y funciones
 
+* **Unidad de medida:** fracciones **fr** distrubuye el espacio disponible en formas iguales.
+* **Funciones:** <br>
+**repeat(cantidad, valor)** para usar el mismo valor varias veces
+* **minmax(min, max)** agregar un valor minimo y maximo para el tamaño al hacer responsive
+
+* Se pueden utilizar funciones dentro de otras funciones 
 
 ```css
+grid-template:300px 150px 100px/repeat(4, minmax(30px, 1fr));
 ```
+* **Auto:** es lo mismo que **fr** pero al mismo tiempo no lo es, porque auto distribuye el espaciado que tiene la columna pero con referencia a su contenido.
