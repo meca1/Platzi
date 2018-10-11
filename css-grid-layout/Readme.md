@@ -32,6 +32,7 @@ Grid implicito (implicit grid) es cuando tenemos filas o columnas que no definim
 ```css
 grid-template: filas / columnas;
 ```
+## Grids identados y tipos de displays
 
 Display subgrid para heredar la configuración del grid padre (cuando se esten anidando grids).
 ```css
@@ -46,6 +47,18 @@ Escoje desde el untimo elemento hacia adelante
 .item:nth-last-of-type(4){
 	background: blue;
 ```
+## Espaciado entre filas y columnas
+
+```css
+
+  grid-column-gap:30px; /*Espaciado entre columnas*/
+  grid-row-gap:30px; /*Espaciado entre filas*/
+
+  grid-gap: filas  columnas;
+  gap: 10px 50px;/*espaciado entre columnas*/
+
+```
+
 
 ```css
 ```

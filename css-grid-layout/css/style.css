@@ -6,11 +6,18 @@ body{
   grid-template:300px 150px 100px/  25% 50% 25%;
   /* grid-template-columns: 25% 50% 25%;
   grid-template-rows:300px 300px; */
+  
+  /* grid-column-gap:30px;
+  grid-row-gap: 30px; */
+  /* grid-gap: filas  columnas; */
+  gap: 10px 50px;
 }
+
 .item {
   background: lightblue;
   padding: 10px;
   border: 1px solid red;
+  
 }
 .item:nth-of-type(4){
   background: blue;
