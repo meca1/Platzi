@@ -116,7 +116,7 @@ Para usar el espacio de toda la fila usamos -1 al final.
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
 
-## Nombre a las líneas
+## nombrar a las líneas
 
 Para definir las líneas se definen en el grid-template y se ponen los nombres entre [].
 
