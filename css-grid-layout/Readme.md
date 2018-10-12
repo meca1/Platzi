@@ -144,7 +144,7 @@ Para cambiar el flujo automático de mi grid:
 grid-auto-flow: column;
 ```
 
-Por defecto viene grid-auto-flow: row;
+Por defecto viene: *grid-auto-flow: row;*
 
 Para asignar el valor por defecto de el espacio de las columnas o filas que no han sido asignadas:
 
@@ -159,14 +159,19 @@ grid-auto-rows: valores;
 
 ## Alinear Grid Items 
 
+### Las del contenedor padre:
+
 Para alinear contenido, en el contenedor grid agregar:
 
 ```css
 justify-items: valor; /*para alineación horizontal*/
 align-items: valor; /*para alineación vertical*/
 ```
+El valor que toman por defecto es stretch
 
 Los valores que toman por defecto es stretch el cual hace que tomen todo el valor asignado en la fila o columna.
+
+### Las de los items dentro del padre:
 
 Para asignar la alineación de un solo elemento, agregar las siguientes propiedades en el grid item a modificar:
 
