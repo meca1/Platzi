@@ -176,8 +176,8 @@ Los valores que toman por defecto es stretch el cual hace que tomen todo el valo
 Para asignar la alineación de un solo elemento, agregar las siguientes propiedades en el grid item a modificar:
 
 ```css
-align-self: valor;
-justify-self: valor;
+align-self: valor; /*Horizontal*/
+justify-self: valor; /*vertical*/
 ```
 
 Los valores que se pueden usar son los siguientes:
