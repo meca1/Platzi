@@ -208,18 +208,14 @@ Estos son los valores que se pueden usar:
 * **space-evenly**: Hay un espacio mas homogeneo entre items.
 * **space-between**: Hay un mismo espacio entre items pero se eliminan el espacio inicial y final.
 
-<div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
-</div>
 
 ## Funciones
 
 `repeat(cantidad de columnas, valor)` para usar el mismo valor varias veces.
 `minmax(min, max)` agregar un valor mínimo y maximo para el tamaño al hacer responsive.
 
-<div align="right">
-  <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
-</div>
+
+
 
 ## Recursos Complementarios
 * [Proyecto Smart Contracts](docs/css-grid-layout.pdf)
