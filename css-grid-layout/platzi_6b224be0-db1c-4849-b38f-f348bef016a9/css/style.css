@@ -1,0 +1,33 @@
+body{ 
+  font-family: 'lato', sans-serif;
+  margin: 0;
+}
+
+.hero{
+  background: #23475b;
+  color: white;
+  padding: 32px 15px
+}
+.title{
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.form{
+  text-align: center;
+  background: rgba(255, 255, 255, .9);
+  padding: 1.5em;
+  border-radius: 10px;
+}
+.form input{
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #dbdbe2;
+  box-sizing: border-box;
+}
+.form p{
+  font-size: 
+}
