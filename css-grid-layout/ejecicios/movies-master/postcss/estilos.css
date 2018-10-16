@@ -1,0 +1,245 @@
+@import './font.css';
+:root{
+	--Fuente: 'Lato', sans-serif;
+	--colorRojo: #fd6766;
+	--colorNombre: #3c464f;
+	--gris: #b2b1b6;
+}
+body{
+	margin: 0;
+	display: grid;
+	grid-template-columns: 10% 1fr;
+	grid-template-rows: 70px 1fr;
+	font-family: var(--Fuente);
+	grid-template-areas: "header header"
+						 "aside pelis";
+	height: 100vh;
+}
+
+.Movie{
+	grid-area: header;
+	box-shadow: 0 2px 20px 5px #f2f2f2;
+	z-index: 1;
+	&-navbar{
+		padding: 0 3em;
+		display: grid;
+		grid-template-columns: 25% 1fr 20%;
+		grid-auto-rows: 70px;
+		grid-template-areas: "brand form usuario";
+		grid-gap: 10px;
+		&-brand{
+			grid-area: brand;
+			display: flex;
+			align-items: center;
+			&-logo{
+				width: 50px;
+				margin: 0;
+				img{
+					width: 100%;
+				}
+			}
+			&-nombre{
+				margin: 0;
+				color: white;
+				-webkit-text-stroke: 1px var(--colorRojo);
+			}
+		}
+		&-form{
+			grid-area: form;
+			display: flex;
+			align-items: center;
+			&-input{
+				width: 100%;
+				border-radius: .25rem;
+				box-shadow: none;
+				border: 1px solid var(--gris);
+				padding: .5em;
+
+			}
+		}
+		&-usuario{
+			grid-area: usuario;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			text-decoration: none;
+			&-nombre{
+				color: var(--colorNombre);
+				font-weight: bold;
+				margin-right: 1em;
+			}
+			&-imagen{
+				width: 50px;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+.Menu{
+	align-content: space-between;
+	background: var(--colorRojo);
+	display: grid;
+	grid-area: aside;
+	padding: 3em 0;
+	z-index: 2;
+	&-list{
+		display: grid;
+		justify-content: center;
+		list-style: none;
+		margin: 0;
+		padding: 1em 0;
+		text-align: center;
+		&-item{
+			padding-bottom: 1em;
+			a{
+				color: white;
+				text-decoration: none;
+				i{
+					font-size: 2rem;
+				}
+
+			}
+		}
+	}
+}
+.Peliculas{
+	grid-area: pelis;
+	padding: 1em 3em;
+	&-title{
+		font-size: 1.2rem;
+	}
+	&-flecha{
+		display: none;
+	}
+	&-container{
+		display: grid;
+		grid-gap: 2em;
+		grid-template-columns: repeat(3, 1fr);
+		&-item{
+			position: relative;
+			color: white;
+			transition: .3s;
+			overflow: hidden;
+			&-img{
+				width: 100%;
+				vertical-align: top;
+			}
+			&-overlay{
+				background: #fd6766ba;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				color: white;
+				padding: .5em;
+				height: 50%;
+				transition: .3s;
+				&-title{
+					margin: 0 0 .5em 0;
+				}
+				&-parrafo{
+					margin: 0;
+					font-weight: 300;
+				}
+			}
+			&:hover{
+				.Peliculas-container-item-overlay{
+					height: 100%;
+					padding: 0 .5em;
+					&-title{
+						padding-top: 1em;
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1024px){
+	body{
+		height: 100vh;
+	}
+	.Peliculas{
+		&-container{
+			grid-template-columns: repeat(2, 1fr);
+			&-item{
+				&-overlay{
+					height: 20%;
+					&-parrafo{
+						opacity: 0;
+						transition: .3s;
+					}
+
+				}
+				&:hover{
+					.Peliculas-container-item-overlay{
+						&-parrafo{
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 767px){
+	body{
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 20% 1fr;
+	}
+	.Movie{
+		height: 70px;
+		overflow: hidden;
+		transition: .3s;
+		&-navbar{
+			grid-template-columns: 1fr 1fr;
+			grid-template-areas: "brand burguer"
+								 "form form"
+								 "usuario usuario";
+			&-boton{
+				align-self: center;
+				justify-self: end;
+				grid-area: burguer;
+				font-size: 2rem;
+			}
+			&-usuario{
+				justify-self: center;
+			}
+		}
+		&.active{
+			height: 100%;
+		}
+	}
+	.Peliculas{
+		position: relative;
+		&-flecha{
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: var(--colorRojo);
+			padding: 1em;
+			z-index: 2;
+			color: white;
+			transition: .3s;
+			&.active{
+				transform: rotate(180deg);
+			}
+		}
+		&-container{
+			grid-template-columns: 1fr;
+		}
+		&.active{
+			grid-column-start: 1;
+			transition: .3s;
+		}
+
+	}
+	.Menu{
+		position: relative;
+		left: -100%;
+		transition: .3s;
+		&.active{
+			left: 0;
+		}
+	}
+}

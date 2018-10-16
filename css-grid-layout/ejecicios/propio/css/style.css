@@ -1,0 +1,87 @@
+body{
+  margin:0;
+  display:grid;
+  grid-template-columns:10% 1fr;
+  grid-template-rows:70px 1fr;
+  font-family:Lato,sans-serif;
+  grid-template-areas:"header header" 
+                      "aside pelis";
+}
+.Peliculas{
+  grid-area:pelis
+  ;padding:1em 3em
+}
+.Peliculas-title{
+  font-size:19.2px;
+  font-size:1.2rem
+}
+.Peliculas-container{
+  display:grid;
+  gap:2em;
+  grid-template-columns:repeat(3,1fr)
+}
+.Peliculas-container-item{
+  position:relative;
+  color:white;
+  transition:.3s;
+  overflow:hidden;
+  border-radius: 10px;
+}
+figure{
+  margin: 0;
+}
+.Peliculas-container-item-img{
+  width:100%;
+  vertical-align:top
+}
+.Peliculas-container-item-overlay{
+  background:#fd6766;
+  background:rgba(253,103,102,.72941);
+  position:absolute;
+  bottom:0;
+  right:0;
+  left:0;
+  color:white;
+  padding:.5em;
+  height:50%;
+  transition:.3s
+}
+.Peliculas-container-item-overlay-title{
+  margin:0 0 .5em
+}
+.Peliculas-container-item-overlay-parrafo{
+  margin:0;
+  font-weight:300;
+}
+  .Peliculas-container-item:hover .Peliculas-container-item-overlay{
+    height:100%;
+    padding: 0 .5em;
+  }
+  .Peliculas-container-item:hover .Peliculas-container-item-overlay-title{
+    padding-top:.5em
+  }
+  .Peliculas-container-item:hover .Peliculas-container-item-overlay-parrafo{
+    display: block;
+  }
+  @media only screen and (max-width:768px){
+    .Peliculas-container{
+      gap: 1em; 
+      grid-template-columns: 1fr
+    }
+  }
+  @media only screen and (max-width:767px){
+   
+    body{
+      grid-template-areas: "header header"
+                           "pelis  pelis"
+    }
+    .Peliculas-container-item-overlay-parrafo{
+      display: none;
+    }
+    .Peliculas-container-item-overlay{
+      height: 10%;
+      padding: 1em;
+      padding-top: 10px;
+      padding-bottom: 13px;
+    }
+  }
