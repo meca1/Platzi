@@ -7,9 +7,76 @@ body{
   grid-template-areas:"header header" 
                       "aside pelis";
 }
+.header{
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 25% 1fr 20%;
+  grid-template-rows: 70px;
+  grid-template-areas: "navbar-logo form-navar usuario";
+  gap: 10px;
+  padding:1em 3em
+}
+.navbar-logo{
+grid-area: navbar-logo; 
+display: flex;
+align-items: center;
+}
+.logo{
+  width: 50px;
+}
+.logo img{
+  width: 100%;
+}
+.nombre-logo{
+  display: block;
+  color: #fd6766;
+}
+.form-navbar{
+  grid-area: form-navar;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input-navbar{
+  width: 100%;
+  border-radius: 5px;
+  padding: .5em;
+  border: 1px solid  #b2b1b6;
+}
+form{
+  display: block;
+}
+.usuario{
+  grid-area: usuario;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  text-decoration: none;
+  justify-content: space-between; 
+}
+.figure-perfil{
+  margin: 1em;
+}
+.image-perfil{
+  width: 50px;
+  border-radius: 50%;
+}
+.aside{
+  grid-area: aside;
+  background: #fd6766;
+
+}
+
+
+
+
 .Peliculas{
-  grid-area:pelis
-  ;padding:1em 3em
+  margin: 2em;
+  grid-area:pelis;
+  padding:1em 3em
 }
 .Peliculas-title{
   font-size:19.2px;
