@@ -18,42 +18,26 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  font-size: 2.5em;
-  margin: 0.2em;
+  /* font-size: 2.5em;
+  margin: 0.2em; */
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.icon-github:before {
-  content: "\e901";
-}
-.icon-twitter:before {
-  content: "\e902";
-}
-.icon-instagram:before {
-  content: "\e903";
-}
-.icon-facebook:before {
-  content: "\e904";
-}
 .icon-menu:before {
   content: "\e900";
 }
-.burger-button{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, .5);
-  display: block;
-  line-height: 40px;
-  text-align: center;
-  position: fixed;
-  z-index: 4;
-  color: white;
-  font-size: 1.5em;
+.icon-home:before {
+  content: "\e900";
 }
+.icon-fire:before {
+  content: "\e9a9";
+}
+.icon-heart:before {
+  content: "\e9da";
+}
+
 body{
   margin:0;
   display:grid;
@@ -63,6 +47,7 @@ body{
   grid-template-areas:"header header" 
                       "aside pelis";
 }
+
 .header{
   grid-area: header;
   display: grid;
@@ -121,14 +106,46 @@ form{
   border-radius: 50%;
 }
 aside {
+  
   grid-area: aside;
   background: #fd6766;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 15%);
+
+  grid-template-areas: "home"
+                       "fire"
+                       "heart";                     
 }
-aside a {
+aside span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
-  width: 50px;
-  height: 50px;
-  font-size: 50px
+  flex-wrap: wrap;
+
+}
+aside span a {
+  margin-top: 1em;
+  color: white;
+  font-size: 3em;
+  text-decoration: none;
+}
+
+aside span p{
+  padding: 0 1em;
+}
+
+.home{
+  grid-area: home;
+}
+.fire{
+  grid-area: fire;
+  
+}
+.heart{
+  grid-area: heart;
+  
 }
 
 
@@ -207,9 +224,12 @@ figure{
     .Peliculas{
       padding: 1em 0;
     }
+
   }
   @media only screen and (max-width:767px){
-   
+    .aside {
+      display: none;
+    }
     body{
       grid-template-areas: "header header"
                            "pelis  pelis"
