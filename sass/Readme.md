@@ -195,6 +195,9 @@ En este caso le estamos definiendo un valor por defecto. Si deseamos cambiar ese
 ```scss
 @mixin max-width(1200px)
 ```
+Notas:
+
+La variable que definamos como primer parámetro dentro del mixin sera usada únicamente dentro del mixin.
 
 <div align="right">
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
@@ -229,6 +232,8 @@ section {
 
 ## Extend
 
+`@extend` le indica a Sass que un determinado selector debería heredar todos los estilos de otro selector
+
 Permiten que una declaración herede estilos declarados por otra regla o placeholder. Los extend se declaran con el símbolo de porcentaje `%`.
 
 ```scss
@@ -242,6 +247,45 @@ Permiten que una declaración herede estilos declarados por otra regla o placeho
   background: blue;
 }
 ```
+El resultado en css sería el siguiente:
+
+```css
+.btn-info {
+  color: red;
+  width: 50px;
+  background: blue;
+}
+```
+y el  `%btn`  podría usarlo en varias partes. La idea del placeholder es crear un bloque de estilos que se reutilicen en varias clases.
+
+Si aparte de .btn-info tengo otro estilo, por ejemplo, .btn-danger, entonces podría reutilizar %btn.
+
+```css
+.btn-danger {
+  @extend %btn;
+  background: orange;
+}
+```
+
+y el resultado sería:
+
+```css
+.btn-danger {
+ color: red;
+ width: 50px;
+ background: orange;
+}
+```
+
+## En resumen:
+<hr/>
+
+- **Mixings:** permiten insertar estilos en una declaración, con la ventaja de que permite parametrizar valores (colores, font-sizes, etc).
+
+- **Contents:** muy útiles para definir breakpoints de estilo.
+
+- **Extends:** permiten que una declaración herede estilos declarados por otra regla o placeholder (%).
+
 
 <div align="right">
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>

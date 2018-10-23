@@ -2,8 +2,13 @@
 |             $MINXIS            |
 \* ----------------------------- */
 
-@mixin max-width {
-  max-width: 800px;
+@mixin max-width ($maxwidth: $page-max-width) {
+  max-width: $maxwidth;
   margin-left: auto;
   margin-right: auto;
+}
+@mixin respond-to($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
 }
