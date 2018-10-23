@@ -1,7 +1,19 @@
-$color : red!default;
-$color2 : blue!default;
-$color4 : green!default;
+//librerias setings y variables
+@import "lib/variables.scss";
+@import "lib/minxin";
 
-div{
-  background: $color2;
-}
+//elementos base
+@import "tablas";
+@import "base/botones";
+@import "base/tipografia.scss";
+
+//Componentes
+@import "components/grids";
+
+//layout
+
+@import"layout/layout";
+
+
+//Este siempre va de ultimo
+@import "components/utilities";

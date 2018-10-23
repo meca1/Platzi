@@ -1,0 +1,17 @@
+{
+    "version": 3,
+    "mappings": "ACAA;;mCAEmC;AAEnC,2BAA2B;ACJ3B;;mCAEmC;ACFnC;;mCAEmC;AACnC,AAAA,KAAK,CAAC,EAAE,AAAA,MAAM,CAAC;EACf,gBAAgB,EFGE,OAAmB;CEHA;;ACJrC;;mCAEmC;AACnC,AAAA,IAAI,CAAA;EACF,OAAO,EAAE,YAAY;EACrB,KAAK,EHQO,KAAK;EGPjB,gBAAgB,EHAJ,OAAO;EGCnB,WAAW,EAAE,GAAG;EAChB,aAAa,EHsBA,GAAG;EGrBhB,SAAS,EHkBM,IAAmB;CGXnC;;AAbD,AAOE,IAPE,CAOF,UAAU,CAAA;EACR,SAAS,EAAE,IAAI;CAChB;;AATH,AAUE,IAVE,CAUF,UAAU,CAAA;EACR,gBAAgB,EHIR,OAAe;CGHxB;;ACfH;;mCAEmC;ACFnC;;mCAEmC;ACFnC;;mCAEmC;AACnC,AAAA,OAAO,CAAA;ELEL,SAAS,EAAE,KAAK;EAChB,WAAW,EAAE,IAAI;EACjB,YAAY,EAAE,IAAI;EKFlB,gBAAgB,ENOD,OAAO;EMNtB,OAAO,ENyBC,IAAI;CMxBb;;ACPD;;mCAEmC",
+    "sources": [
+        "styles.scss",
+        "lib/_variables.scss",
+        "lib/_minxin.scss",
+        "_tablas.scss",
+        "base/_botones.scss",
+        "base/_tipografia.scss",
+        "components/_grids.scss",
+        "layout/_layout.scss",
+        "components/_utilities.scss"
+    ],
+    "names": [],
+    "file": "styles.css"
+}

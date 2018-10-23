@@ -1,0 +1,8 @@
+/* ----------------------------- *\
+|             $LAYOUT            |
+\* ----------------------------- */
+section{
+  @include max-width;
+  background-color: $color-ligt-grey;
+  padding: $padding;
+}

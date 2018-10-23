@@ -1,0 +1,17 @@
+/* ----------------------------- *\
+|             $BUTTONS            |
+\* ----------------------------- */
+.btn{
+  display: inline-block;
+  color: $buttonColor;
+  background-color: $buttonBackgroundColor;
+  line-height: 2.5;
+  border-radius: $border-radius;
+  font-size: $buttonFontSize;
+  .btn__icon{
+    font-size: .6em;
+  }
+  .btn--info{
+    background-color: $color-info;
+  }
+}
