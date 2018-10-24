@@ -309,7 +309,7 @@ https://sass-lang.com/documentation/file.SASS_REFERENCE.html#functions
 </div>
 
 ### Crear funciones
-
+scss
 ```scss
 @function suma($numero-uno, $numero-dos) {
   @return $numero-uno + $numero-dos;
@@ -319,12 +319,20 @@ https://sass-lang.com/documentation/file.SASS_REFERENCE.html#functions
   padding: suma(10px, 5px);
 }
 ```
+css
+```css
+.div{
+  padding:15px;
+}
+```
 
 <div align="right">
   <small><a href="#tabla-de-contenido">🡡 volver al inicio</a></small>
 </div>
 
 ## Array
+
+Las funciones también puede ser extraer valores de un array. Una función puede utilizar arrays que son más parecidas a listas. Para Sass es más un mapa. En esta clase vamos a aprender a usar mapas con los posibles tipos de fuentes que hayan.
 
 ```scss
 $fs: (
@@ -352,10 +360,10 @@ small {
 ### each
 
 ```scss
-$font-weights: normal bold italic;
+$font-weights: normal bold italic;//lista
 
-@each $font in ($font-weights) {
-  .#{$font} {font.weight: $font;}
+@each $font in ($font-weights) { recoore
+  .#{$font} {font.weight: $font;}//directiva each
 }
 ```
 
@@ -373,6 +381,13 @@ y esto da como resultado:
 .italic {
   font-weight: italic;
 }
+```
+Notas:
+
+Escapar una variable
+
+```scss
+.#{$variable}
 ```
 
 <div align="right">
