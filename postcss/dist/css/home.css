@@ -7,14 +7,17 @@ body {
   --lightColor: white;
   --warningColor: red;
   --button: {
+    border: 1px solid white;
     border: 1px solid var(--lightColor);
     border-radius: 5px;
     background: var(--darckColor);
+    color: white;
     color: var(--lightColor);
     padding: .5em 2em;
     text-transform: uppercase;
     cursor: pointer;
     font-size: 14px;
+    border-bottom: 5px solid white;
     border-bottom: 5px solid var(--lightColor)
   };
 }
@@ -24,35 +27,51 @@ body {
 }
 
 .btn.warning {
+  background: red;
   background: var(--warningColor);
 }
 
 /*home layout*/
 .home {
+  background: white;
   background: var(--lightColor);
+  display: -ms-grid;
   display: grid;
   height: 100vh;
-  grid-template-columns: 350px 1fr;
-  grid-template-rows: 1fr 150px;
-  grid-template-areas: "sidebar primary"
+      -ms-grid-columns: 350px 1fr;
+      grid-template-columns: 350px 1fr;
+      -ms-grid-rows: 1fr 150px;
+      grid-template-rows: 1fr 150px;
+      grid-template-areas: "sidebar primary"
                        "sidebar featuring";
 }
 
 .home-sidebar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
   grid-area: sidebar;
 }
 .home-primary {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: primary;
 }
 .home-featuring {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: featuring;
 }
 
 /*Sidebar*/
 .sidebar {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto 1fr 1fr;
+      grid-template-rows: auto 1fr 1fr;
+  background: #15192a;
   background: var(--darkColor);
   color: white;
   padding: 1em;
@@ -136,10 +155,13 @@ body {
 
 
 .home-primary {
+  display: -ms-grid;
   display: grid;
-  grid-template-areas: "search user"
+      grid-template-areas: "search user"
                        "list list";
+  -ms-grid-rows: auto 1fr;
   grid-template-rows: auto 1fr;
+  -ms-grid-columns: 300px 1fr;
   grid-template-columns: 300px 1fr;
   padding: 10px;
   overflow: auto;
@@ -147,6 +169,8 @@ body {
 
 
 .search {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: search;
 }
 
@@ -163,7 +187,8 @@ body {
 }
 
 .primary-user {
-  justify-self: end;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
 .user p {
@@ -175,12 +200,16 @@ body {
 .user img {
   width: 45px;
   height: 45px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
   margin-right: 10px;
 }
 
 .primary-list {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: list;
   overflow: auto;
 }
@@ -215,7 +244,8 @@ body {
 .primaryPlaylistItem img {
   width: 250px;
   height: 180px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .primaryPlaylistItem-title {
   margin: 5px 0;

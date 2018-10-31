@@ -54,3 +54,31 @@ La segunda ruta es donde se guardara el archivo transformado
 ```html
 <linkrel="stylesheet"href="dist/css/home.css" />
 ```
+ **Importante**<br>
+El creador de CSSNext ha anunciado que ya no va a seguir con el desarrollo del plugin y ahora se encuentra obsoleto.
+
+https://moox.io/blog/deprecating-cssnext/
+
+Recomienda usar postcss-preset-env. en su lugar.
+
+Entiendo que para usar este nuevo plugin la única diferencia para el resto del curso sería instalar el plugin y agregarlo al postcss.config.js?
+
+```js
+module.exports = {
+  plugins: [
+    require("postcss-preset-env.")
+  ]
+}
+```
+DESPUES
+```JS
+module.exports = {
+    plugins: [
+        require('postcss-preset-env')({
+            autoprefixer: {
+                grid: true,
+            }
+        })
+    ]
+}
+```
