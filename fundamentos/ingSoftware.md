@@ -228,6 +228,76 @@ La memoria RAM guarda los ceros y unos mientras haya energia
 El DiscoDuro almacena bytes con energia o sin energia
 El procesador toma los bytes y los convierte en otros gracias a instrucciones que son código de programación (Java, C#, Assembler,) que se almacenan en memoria - se ejecuta en el procesador y por dentro manipulan electrones.
 
+## Procesadores y arquitecturas de CPU
 
+Vivimos en un mundo donde todo es un computador como celulares, tablets, televisores, etc.
+
+Existen una arquitectura para computadores de escritorio y laptops, estos internamente tienen:
+
+CPUs: "*unidad central de proceso*"su velocidad de mide en GHz y tienen Cores que son el número de instrucciones en paralelo que pueden hacer.
+En este momento se hacen las CPUs en silicio y estas se calientan de acuerdo a la cantidad de procesos.
+
+BIOS, es un pequeño sistema operativi de arranque en el computador y comprueba la conexión del hardware.
+
+Disco duro, es donde se almacena el sistema operativo y los archivos que guardamos.
+
+Memoria RAM, los datos del sistema operativo se envía a la memoria que sirve como intermediario con la CPU, porque es una memoria de acceso rápido, esta memoria solo funciona cuando hay electricidad lo que significa que es bolatil.
+
+GPU, puede procesar en paralelo los pixeles de la pantalla y enviarlo en tiempo real para representarlos.
 
 los driver entiende señales electricas y la convierten en bit y bite que la cpu manda al sitema operativo pra que funciones los perifericos  
+
+**CPU **
+//Unidad central de procesamiento
+(
+Cores = cantidad de CPUs paralelos
+GHZ = velocidad a la que procesan una instrucción
+)
+
+**BIOS **
+(
+Cuando recibe electricidad -> arranca
+
+Cuando arranca
+Detecta lo que esta conectado al computador
+
+Disco duro
+Alli esta el sistema operativo
+CPU
+RAM (ramdom access memory) memoria volatil
+Funciona cuando hay electricidad
+Cuando guardas informaciòn (RAM -> Disco Duro)
+
+RAM = (
+Circuitos, transistores
+)
+
+CPU activa perifericos
+//perifericos son cosas externas
+teclado, mouse, puertos
+
+Los perifericos funcionan gracias a chips especiales y drivers
+drivers son piezas de software
+
+GPU
+graphic proccesor unit
+
+Es quien grafica pixeles de la pantalla
+
+Tarjeta de sonido (muerto)
+
+ahora viene integrado en la board o bios
+
+La CPU puede hacer todo
+pero no deberia…
+
+La especializacion es igual de bueno para las maquinas que para las personas
+)
+
+Todo esto es fisica y quimica
+
+Cpu: Unidad central de procesamiento (central processing unit)
+RAM: La memoria de acceso aleatorio (Random Access Memory, RAM)
+BIOS: sistema básico de entrada-salida o BIOS (Basic Input/Output System)
+Dico Duro: unidad de disco duro, hard disk drive, HDD
+GPU: Unidad de procesamiento gráfico o GPU (Graphics Processing Unit)
