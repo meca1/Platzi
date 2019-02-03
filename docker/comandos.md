@@ -45,18 +45,18 @@ Adicional :
     
 -   **docker stop**  command. The main process inside the container will receive SIGTERM, and after a grace period, SIGKILL.
 
-**docker exec**: ejecuta un comando en un contenedor. `docker exec -it contenedor bash`  
-parar un contenedor `docker kill contenedor`  
-eliminar un contenedor en ejecución `docker rm -f contenedor`  
-`rm` => remove  
-`-f` => force
-
-Exponiendo contenedores al mundo exterior
-
-Los contenedores están aislados del sistema y a nivel de red, cada contenedor tiene su propia stack de net y sus propios puertos.
-
-**Debemos redirigir los puertos del contenedor a los de la computadora**  y lo podemos hacer al utilizar este comando:
-
+**docker exec**: ejecuta un  itcomando en un contenedor. `docker exec -it contenedor bash`  
+parar un contenedor `docker  itkill contenedor`  
+eliminar un contenedor en ej itecución `docker rm -f contenedor`  
+`rm` => remove   it
+`-f` => force it
+ it
+Exponiendo contenedores al m itundo exterior
+ it
+Los contenedores están aisla itdos del sistema y a nivel de red, cada contenedor tiene su propia stack de net y sus propios puertos.
+ it
+**Debemos redirigir los puer ittos del contenedor a los de la computadora**  y lo podemos hacer al utilizar este comando:
+ it
 ```
 docker run -d --name server -p 8080:80  nombreDelContenedor
 ```
