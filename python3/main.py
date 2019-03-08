@@ -22,10 +22,10 @@ def list_clients():
 
     for idx, client in enumerate(clients):
         print('{uid} | {name} | {company} | {email} | {position}'.format(
-            uid=idx, 
-            name=client['name'], 
-            company=client['company'], 
-            email=client['email'], 
+            uid=idx,
+            name=client['name'],
+            company=client['company'],
+            email=client['email'],
             position=client['position']))
 
 
@@ -43,7 +43,7 @@ def delete_client(client_id):
 
     for idx, client in enumerate(clients):
         if idx == client_id:
-            del clients[idx] 
+            del clients[idx]
             break
 
 
@@ -129,11 +129,14 @@ if __name__ == '__main__':
     elif command == 'S':
         client_name = _get_client_field('name')
         found = search_client(client_name)
-        
+
         if found:
             print('The client is in the client\'s list')
         else:
-            print('The client: {} is not in our client\'s list'.format(client_name))
+            print('The client: {} is not in our client\'s list'.format(
+
+                client_name
+                ))
     else:
         print('Invalid command')
 
