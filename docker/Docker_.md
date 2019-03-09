@@ -229,10 +229,76 @@ WriteResult({ "nInserted" : 1 })
 { "_id" : ObjectId("5c82c98dabf4a8572281d580"), "name" : "daniel" }
 ```
 6. salimos de la base de datos y del contenedor y podemos darnos cuenta de que si borramos nuestro contenedor y creamos uno nuevo que se enlace con el mismo volume, toda la informacion va a estar ahí. 
+
+## Conceptos fundamentales de Docker: imágenes
+
+Las **imágenes** son un componente fundamental de Docker y sin ellas los contenedores no tendrían sentido. Estas imágenes son fundamentalmente plantillas o templates.  
+Algo que debemos tener en cuenta es que las imágenes no van a cambiar, es decir, una vez este realizada no la podremos cambiar.
  
+ 1. vamos a optener una imagen de un contenedor `docker pull <nombre de la imagen> `una imagen no solo es un archivo o una sola cosa
+  es un conjunto de capas o layers
+  
+	  Descargar imágenes en el host imágenes descargadas en el host
+ 
+	Ej: `docker pull redis`  
+	Ej: `docker pull ubuntu:18.04` descargando una version en particular
+  
+	 
+  * una imagen siempre esta montada sobre una capa base y capas que se van montando sobre ella es lo mismo que los commits de git.
+2. Ver imágenes descargadas en el host
+`docker image ls`
+3. docker es super eficiente: si tengo imagenes que tiene el mismo contenido va a compartir esa misma informacion sin ocuparmas espacio en memoria
+4. Eliminar imágenes descargadas en el host
+	`docker image ls` // para obtener el id de la imagen
+	
+	```
+	REPOSITORY        TAG                 IMAGE ID            CREATED             SIZE
+	ubuntu           latest              93fd78260bd1        3 months ago        86.2MB
+    ```
+	Ej: `docker rmi -f 93fd78260bd1`
+*	Eliminar una sola imagen
+docker rmi image_name:version/image-id
+* Eliminar todas las imágenes
+docker rmi $(docker images -qf "dangling=true")
+* Mata contenedores y quítalos:
+docker rm $(docker kill $(docker ps -aq))
+Nota: Reemplazar kill con stop para un apagado correcto
+
+* Eliminar todas las imágenes excepto "my-image"
+Use grep para eliminar todo, excepto my-image y ubuntu
+
+	`docker rmi $(docker images | grep -v ‘ubuntu|my-image’ | awk {‘print $3’})`
+
+	O (sin awk)
+
+	`docker rmi $(docker images --quiet | grep -v $(docker images --quiet ubuntu:my-image))`
+
+## Construyendo nuestras propias imágenes
+Vamos a crear nuestras propias imágenes, necesitamos un archivo llamado DockerFile que es la ““receta”” que utiliza Docker para crear imágenes.
+
+**Es importante que el DockerFile siempre empiece con un ““FROM”” sino, no va a funcionar. **
+
+El flujo para construir en Docker siempre es así:
+Dockerfile – **build **–> Imágen – run --> Contenedor
+
+### Creando mi primer Dockerfile:
+
+    touch Dockerfile
+
+dentro del dockerfile 
+```docker
+FROM ubuntu
+RUN touch /usr/src/hola-platzi
+```
+construimos la imagen con  -t el "TAG" como se va a llamar y al final le paso el path para que el sepa de donde va a sacar el contexto de build 
+
+    docker build -t ubuntu:platzi .
+
+  ![Imagen relacionada](https://cdn-images-1.medium.com/max/1600/1*p8k1b2DZTQEW_yf0hYniXw.png)
+  ![Resultado de imagen para DOCKER BUILD](https://cdn-images-1.medium.com/max/1600/0*EMmmZ8pZPRzfewJy.png)
 ## Conseptos 
 * **virtualizacion:** es una maquina corriendo dentro de otra maquina
 * **Contenedores:** Los contenedores son el concepto fundamentalal hablar de docker. Un contenedor es una entidad lógica, una agrupación de procesos que se ejecutan de forma nativa como cualquier otra aplicación en la máquina host.
   * Un contenedor ejecuta sus procesos de forma nativa
 [chroot, cgroups and namespaces — An overview – ITNEXT](https://itnext.io/chroot-cgroups-and-namespaces-an-overview-37124d995e3d)
-
+* **las imagenes** son plantillas para contruir los contenedores
