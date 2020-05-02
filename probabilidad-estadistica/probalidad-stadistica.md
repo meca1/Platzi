@@ -76,7 +76,7 @@ A ={2,4,6}
 B ={3,6}  
 A∪B ={6}
 
-## Probabilidad compuesta: Intersección clase 4
+## Probabilidad compuesta: Intersección clase 5
 
 Si **A** y **B** son eventos independientes (es decir, que sus probabilidades no cambien si pasa uno u otro), se puede calcular la probabilidad de que puedan ocurrir ambos mediante:  
   
