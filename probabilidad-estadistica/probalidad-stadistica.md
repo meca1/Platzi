@@ -99,3 +99,4 @@ Entonces, como queremos hallar **P(B | A)** y tenemos **P(A∩B)** y **P(A)**, s
 **P(B | A) = P(A∩B) / P(A)**
 
 [Mejor explicacion aqui](https://www.superprof.es/apuntes/escolar/matematicas/probabilidades/combinatoria/interseccion-de-sucesos.html)
+clase 6
